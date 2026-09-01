@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Game (Page level) -->
+  <main class="game">
+    <!-- Header (Organism) -->
+    <header class="header">
+      <h1 class="header__title">Ahorcado</h1>
+      <p class="header__subtitle">Adivina la palabra antes de que se complete el dibujo</p>
+    </header>
+
+    <!-- Game Board (Organism) -->
+    <section class="game-board">
+      <!-- Hangman SVG -->
+      <div class="game-board__svg-container">
+        <svg class="game-board__svg" viewBox="0 0 200 240">
+          <!-- Base -->
+          <line x1="20" y1="230" x2="100" y2="230" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Poste vertical -->
+          <line x1="60" y1="230" x2="60" y2="20" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Poste horizontal -->
+          <line x1="60" y1="20" x2="140" y2="20" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Cuerda -->
+          <line x1="140" y1="20" x2="140" y2="50" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+
+          <!-- Partes del cuerpo (inicialmente ocultas) -->
+          <!-- Cabeza -->
+          <circle id="head" class="part" cx="140" cy="65" r="15" fill="none" stroke="#ecf0f1" stroke-width="3"/>
+          <!-- Cuerpo -->
+          <line id="body" class="part" x1="140" y1="80" x2="140" y2="140" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Brazo izquierdo -->
+          <line id="left-arm" class="part" x1="140" y1="100" x2="110" y2="120" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Brazo derecho -->
+          <line id="right-arm" class="part" x1="140" y1="100" x2="170" y2="120" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Pierna izquierda -->
+          <line id="left-leg" class="part" x1="140" y1="140" x2="115" y2="180" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+          <!-- Pierna derecha -->
+          <line id="right-leg" class="part" x1="140" y1="140" x2="165" y2="180" stroke="#ecf0f1" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Status Info -->
+      <div class="game-status">
+        <div class="game-status__info">
+          <!-- Category Badge (Atom) -->
+          <div class="category-badge">
+            <span class="category-badge__icon">🏷️</span>
+            <span class="category-badge__text">-</span>
+          </div>
+
+          <!-- Attempts Counter (Atom) -->
+          <div class="attempts">
+            <span class="attempts__icon">❤️</span>
+            <span class="attempts__count">6</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Word Section -->
+    <section class="word-section">
+      <!-- Message -->
+      <div class="message"></div>
+
+      <!-- Word Display (Molecule) -->
+      <div class="word-display"></div>
+    </section>
+
+    <!-- Keyboard (Molecule) -->
+    <div class="keyboard"></div>
+
+    <!-- Game Controls -->
+    <div class="game-controls">
+      <button class="btn btn--new-game">Nueva Partida</button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/words.js"></script>
+  <script src="js/hangman-drawing.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

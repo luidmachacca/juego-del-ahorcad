@@ -1,0 +1,187 @@
+/* ========================================
+   ATOMS - Elementos indivisibles
+   ======================================== */
+
+/* Key - Tecla del teclado virtual */
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  background-color: var(--color-key-bg);
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.key:hover:not(.key--disabled) {
+  background-color: var(--color-key-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.key:active:not(.key--disabled) {
+  transform: translateY(0);
+}
+
+.key--correct {
+  background-color: var(--color-key-correct);
+  border-color: var(--color-key-correct);
+  cursor: default;
+}
+
+.key--wrong {
+  background-color: var(--color-key-wrong);
+  border-color: var(--color-key-wrong);
+  cursor: default;
+}
+
+.key--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Letter - Espacio para cada letra de la palabra */
+.letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 50px;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  background-color: var(--color-letter-bg);
+  border-bottom: 3px solid var(--color-letter-border);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  text-transform: uppercase;
+  transition: all var(--transition-normal);
+}
+
+.letter--revealed {
+  background-color: var(--color-surface);
+  border-bottom-color: var(--color-success);
+  animation: reveal 0.4s ease;
+}
+
+.letter--empty {
+  color: transparent;
+}
+
+.letter--wrong-reveal {
+  color: var(--color-danger);
+  background-color: rgba(231, 76, 60, 0.1);
+  border-bottom-color: var(--color-danger);
+}
+
+@keyframes reveal {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* SVG Part - Pieza del cuerpo del ahorcado */
+.part {
+  fill: var(--color-svg-fill);
+  stroke: var(--color-svg-stroke);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.part--visible {
+  opacity: 1;
+  animation: partAppear 0.5s ease;
+}
+
+@keyframes partAppear {
+  0% {
+    opacity: 0;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+  }
+  100% {
+    opacity: 1;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Clue - Pista / Categoría */
+.clue {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Button - Botón genérico */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Title - Títulos */
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Attempts counter */
+.attempts {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.attempts__icon {
+  font-size: var(--font-size-xl);
+}
+
+.attempts__count {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-warning);
+}

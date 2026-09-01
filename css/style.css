@@ -1,0 +1,76 @@
+/* ========================================
+   PAGE - Estilos globales de la página
+   ======================================== */
+
+@import url('variables.css');
+@import url('css-reset.css');
+@import url('atoms.css');
+@import url('molecules.css');
+@import url('organisms.css');
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Game Container */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100vh;
+  padding: var(--space-md);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .key {
+    width: 36px;
+    height: 36px;
+    font-size: var(--font-size-md);
+  }
+
+  .letter {
+    width: 32px;
+    height: 40px;
+    font-size: var(--font-size-xl);
+  }
+
+  .game-board__svg-container {
+    width: 180px;
+    height: 220px;
+  }
+
+  .game-status__info {
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 400px) {
+  .key {
+    width: 30px;
+    height: 30px;
+    font-size: var(--font-size-sm);
+  }
+
+  .letter {
+    width: 26px;
+    height: 34px;
+    font-size: var(--font-size-lg);
+  }
+
+  .keyboard__row {
+    gap: 2px;
+  }
+}
