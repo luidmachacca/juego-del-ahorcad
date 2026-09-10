@@ -100,10 +100,7 @@ Puedes probar el proyecto directamente desde GitHub Pages:
 </div>
 
 
-<br>
-## 👨‍💻 Autor
-
-<br>
+##👨‍💻 Autor
 
 <div align="center">
     <a href="https://github.com/luidmachacca">
