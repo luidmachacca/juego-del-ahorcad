@@ -101,8 +101,10 @@ Puedes probar el proyecto directamente desde GitHub Pages:
 
 
 <br>
-👨‍💻 Autor
+## 👨‍💻 Autor
+
 <br>
+
 <div align="center">
     <a href="https://github.com/luidmachacca">
         <img src="https://img.shields.io/badge/GitHub-luidmachacca-181717?logo=github&logoColor=FFFFFF&style=for-the-badge"/>
