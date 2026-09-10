@@ -1,8 +1,9 @@
 # 🎮 Juego del Ahorcado | JavaScript
 
 <p align="center">
-    <img src="./assets/img/preview.png" alt="Juego del Ahorcado" width="800">
+    <img src="./preview.png" alt="Juego del Ahorcado" width="1000">
 </p>
+
 
 <div align="center">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000000&style=for-the-badge"/>
