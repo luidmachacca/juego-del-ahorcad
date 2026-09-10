@@ -99,23 +99,8 @@ Puedes probar el proyecto directamente desde GitHub Pages:
 
 </div>
 
-## 💡 Aprendizajes
 
-Durante el desarrollo de este proyecto practiqué:
-
-* Manipulación del DOM con JavaScript.
-* Manejo de eventos.
-* Lógica y estado de una aplicación.
-* Organización modular de JavaScript.
-* Componentización de estilos CSS.
-* Uso de SVG.
-* Diseño responsive.
-* Git y GitHub.
-* Despliegue con GitHub Pages.
-
-## 👨‍💻 Autor
-
-**Luis Machacca**
+<br>
 
 <div>
     <a href="https://github.com/luidmachacca">
@@ -123,11 +108,5 @@ Durante el desarrollo de este proyecto practiqué:
     </a>
 </div>
 
-<br>
 
-<div align="center">
-
-⭐ **Si te gustó el proyecto, puedes darle una estrella al repositorio.**
-
-</div>
 
